@@ -30,6 +30,7 @@
         <a href="#noticias">Noticias</a>
         <a href="#personal">Personal</a>
         <a href="#horarios">Horarios</a>
+        <a href="#galeria">Galería</a>
         <a href="#contacto">Contacto</a>
     </nav>
 
@@ -54,6 +55,38 @@
                 </div>
             </div>
         </section>
+
+        
+        <!-- NOTICIAS DESTACADAS -->
+        <section id="destacadas" class="seccion-destacadas">
+
+            <div class="destacadas-encabezado">
+
+                <div>
+                    <h2>Noticias destacadas</h2>
+                    <p>
+                        Conoce las novedades más importantes
+                        de nuestra comunidad educativa.
+                    </p>
+                </div>
+
+                <a href="#noticias" class="enlace-noticias">
+                    Ver todas las noticias →
+                </a>
+
+            </div>
+
+            <!-- Aquí JavaScript mostrará las noticias -->
+            <div id="listaDestacadas"
+                class="destacadas-contenedor">
+            </div>
+
+            <p id="mensajeDestacadas" hidden>
+                Aún no hay noticias destacadas.
+            </p>
+
+        </section>
+
 
         <!-- INSTITUCIÓN -->
         <section id="institucion">
@@ -90,51 +123,47 @@
                 </select>
             </div>
 
+            
+
             <div class="contenedor-noticias">
 
-                <article class="noticia" data-categoria="academico">
-                    <div class="imagen-noticia">Imagen pendiente</div>
+                <article class="noticia" data-categoria="academico" data-destacada="true">
+
+                    <div class="imagen-noticia">
+                        <img src="img/fachada.jpg"
+                            alt="Fachada de la unidad educativa">
+                    </div>
 
                     <div class="contenido-noticia">
-                        <span class="categoria">Académico</span>
-                        <h3>Actividades académicas</h3>
+
+                        <span class="categoria">
+                            Demostración
+                        </span>
+
+                        <h3>Noticia de ejemplo</h3>
+
                         <p>
-                            Espacio reservado para publicar una
-                            actividad académica verificada.
+                            Conoce cómo funcionará el apartado
+                            de noticias completas de nuestra
+                            página web institucional.
                         </p>
-                        <small>Fecha pendiente</small>
+
+                        <small>
+                            Publicación de prueba
+                        </small>
+
+                        <a href="noticias/noticia-ejemplo.html"
+                        class="boton-leer">
+                            Leer más →
+                        </a>
+
                     </div>
-                </article>
 
-                <article class="noticia" data-categoria="deportes">
-                    <div class="imagen-noticia">Imagen pendiente</div>
-
-                    <div class="contenido-noticia">
-                        <span class="categoria">Deportes</span>
-                        <h3>Actividades deportivas</h3>
-                        <p>
-                            Espacio reservado para publicar
-                            información deportiva del colegio.
-                        </p>
-                        <small>Fecha pendiente</small>
-                    </div>
-                </article>
-
-                <article class="noticia" data-categoria="cultura">
-                    <div class="imagen-noticia">Imagen pendiente</div>
-
-                    <div class="contenido-noticia">
-                        <span class="categoria">Cultura</span>
-                        <h3>Actividades culturales</h3>
-                        <p>
-                            Espacio destinado a la difusión
-                            de actividades culturales.
-                        </p>
-                        <small>Fecha pendiente</small>
-                    </div>
                 </article>
 
             </div>
+
+
 
             <p id="sinResultados" hidden>
                 No se encontraron noticias.
@@ -143,40 +172,417 @@
 
 
         <!-- PERSONAL -->
+        
         <section id="personal">
-            <h2>Personal de la unidad educativa</h2>
+            <h2>Nuestro personal educativo</h2>
+
             <p>
-                En esta sección se presentará información
-                autorizada del director, profesores
-                y personal administrativo.
+                Conoce al equipo directivo, docente y
+                administrativo de nuestra unidad educativa.
             </p>
+
+            <div class="personal-contenedor">
+
+                <article class="personal-tarjeta">
+                    <div class="personal-avatar">D</div>
+                    <h3>Dirección</h3>
+                    <p>Nombre pendiente de confirmación</p>
+                    <span>Director/a</span>
+                </article>
+
+                <article class="personal-tarjeta">
+                    <div class="personal-avatar">P</div>
+                    <h3>Personal docente</h3>
+                    <p>Información pendiente</p>
+                    <span>Profesores</span>
+                </article>
+
+                <article class="personal-tarjeta">
+                    <div class="personal-avatar">A</div>
+                    <h3>Personal administrativo</h3>
+                    <p>Información pendiente</p>
+                    <span>Administración</span>
+                </article>
+
+            </div>
         </section>
 
-        <!-- HORARIOS -->
-        <section id="horarios">
+
+<!-- HORARIOS INSTITUCIONALES -->
+        <section id="horarios" class="seccion-horarios">
+
             <h2>Horarios institucionales</h2>
+
             <p>
-                Los horarios oficiales de ingreso y salida
-                se incorporarán después de verificarlos.
+                Consulta los horarios de ingreso, clases,
+                recreo y salida de nuestra unidad educativa.
             </p>
+
+            <div class="horarios-opciones">
+                <button type="button"
+                        class="boton-turno activo"
+                        data-turno="manana">
+                    Turno mañana
+                </button>
+
+                <button type="button"
+                        class="boton-turno"
+                        data-turno="tarde">
+                    Turno tarde
+                </button>
+            </div>
+
+            <!-- TABLA TURNO MAÑANA -->
+            <div id="turno-manana" class="tabla-horarios">
+                <h3>Turno mañana</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Actividad</th>
+                            <th>Horario</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Ingreso de estudiantes</td>
+                            <td>Por confirmar</td>
+                        </tr>
+
+                        <tr>
+                            <td>Inicio de clases</td>
+                            <td>Por confirmar</td>
+                        </tr>
+
+                        <tr>
+                            <td>Recreo</td>
+                            <td>Por confirmar</td>
+                        </tr>
+
+                        <tr>
+                            <td>Salida de estudiantes</td>
+                            <td>Por confirmar</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TABLA TURNO TARDE -->
+            <div id="turno-tarde"
+                class="tabla-horarios"
+                hidden>
+
+                <h3>Turno tarde</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Actividad</th>
+                            <th>Horario</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Ingreso de estudiantes</td>
+                            <td>Por confirmar turno tarde</td>
+                        </tr>
+
+                        <tr>
+                            <td>Inicio de clases</td>
+                            <td>Por confirmar turno tarde</td>
+                        </tr>
+
+                        <tr>
+                            <td>Recreo</td>
+                            <td>Por confirmar turno tarde</td>
+                        </tr>
+
+                        <tr>
+                            <td>Salida de estudiantes</td>
+                            <td>Por confirmar turno tarde</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="aviso-horarios">
+                Información pendiente de verificación institucional.
+            </p>
+
+        </section>
+        
+        
+<!-- GALERÍA FOTOGRÁFICA -->
+        <section id="galeria" class="seccion-galeria">
+
+            <h2>Galería fotográfica</h2>
+
+            <p>
+                Conoce las instalaciones y actividades
+                de nuestra comunidad educativa.
+            </p>
+
+            <!-- FILTROS -->
+            <div class="galeria-filtros">
+
+                <button class="filtro-galeria activo"
+                        type="button"
+                        data-filtro="todas">
+                    Todas
+                </button>
+
+                <button class="filtro-galeria"
+                        type="button"
+                        data-filtro="infraestructura">
+                    Infraestructura
+                </button>
+
+                <button class="filtro-galeria"
+                        type="button"
+                        data-filtro="academico">
+                    Académicas
+                </button>
+
+                <button class="filtro-galeria"
+                        type="button"
+                        data-filtro="cultura">
+                    Culturales
+                </button>
+
+                <button class="filtro-galeria"
+                        type="button"
+                        data-filtro="deportes">
+                    Deportivas
+                </button>
+
+            </div>
+
+            <!-- FOTOGRAFÍAS -->
+            <div class="galeria-contenedor">
+
+                <figure class="galeria-item"
+                        data-categoria="infraestructura">
+
+                    <button type="button"
+                            class="galeria-abrir"
+                            aria-label="Ampliar fotografía de la fachada principal">
+
+                        <img src="img/fachada.jpg"
+                            alt="Fachada principal de la Unidad Educativa Miguel Mercado Encinas"
+                            loading="lazy">
+
+                    </button>
+
+                    <figcaption>
+                        <h3>Fachada principal</h3>
+                        <p>Infraestructura institucional</p>
+                    </figcaption>
+
+                </figure>
+
+                <figure class="galeria-item"
+                        data-categoria="deportes">
+
+                    <button type="button"
+                            class="galeria-abrir"
+                            aria-label="Ampliar fotografía del campo deportivo">
+
+                        <img src="galeria/campo_deportivo.jpg"
+                            alt="Campo deportivo de la Unidad Educativa Miguel Mercado Encinas"
+                            loading="lazy">
+
+                    </button>
+
+                    <figcaption>
+                        <h3>Campo deportivo</h3>
+                        <p>Instalaciones deportivas</p>
+                    </figcaption>
+
+                </figure>
+                <figure class="galeria-item"
+                        data-categoria="cultura">
+
+                    <button type="button"
+                            class="galeria-abrir"
+                            aria-label="Ampliar fotografía del evento cultural">
+
+                        <img src="galeria/evento_cultural.jpg"
+                            alt="Evento cultural en la Unidad Educativa Miguel Mercado Encinas"
+                            loading="lazy">
+
+                    </button>
+
+                    <figcaption>
+                        <h3>Evento cultural</h3>
+                        <p>Instalaciones culturales</p>
+                    </figcaption>
+
+                </figure>
+
+                <figure class="galeria-item"
+                        data-categoria="deportes">
+
+                    <button type="button"
+                            class="galeria-abrir"
+                            aria-label="Ampliar fotografía del evento deportivo">
+
+                        <img src="galeria/deportivo.jpg"
+                            alt="Evento deportivo en la Unidad Educativa Miguel Mercado Encinas"
+                            loading="lazy">
+
+                    </button>
+
+                    <figcaption>
+                        <h3>Evento deportivo</h3>
+                        <p>Instalaciones deportivas</p>
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+            <p id="galeriaSinResultados" hidden>
+                Todavía no se han incorporado fotografías
+                en esta categoría.
+            </p>
+
         </section>
 
-        <!-- CONTACTO -->
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>
-                Próximamente se incorporarán los datos
-                oficiales de contacto y ubicación.
+        <!-- VISOR DE FOTOGRAFÍAS -->
+        <div id="visorGaleria"
+            class="visor-galeria"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Visor de fotografías"
+            hidden>
+
+            <div class="visor-contenido">
+
+                <button type="button"
+                        id="cerrarVisor"
+                        class="cerrar-visor"
+                        aria-label="Cerrar fotografía">
+                    &times;
+                </button>
+
+                <img id="imagenAmpliada"
+                    src=""
+                    alt="">
+
+                <p id="descripcionImagen"></p>
+
+            </div>
+
+        </div>
+
+        
+        <!-- CONTACTO INSTITUCIONAL -->
+        <section id="contacto" class="seccion-contacto">
+
+            <h2>Contacto y ubicación</h2>
+
+            <p class="contacto-introduccion">
+                Conoce la información de contacto y ubicación
+                de nuestra unidad educativa.
             </p>
+
+            <div class="contacto-contenedor">
+
+                <!-- UBICACIÓN -->
+                <article class="contacto-tarjeta">
+                    <div class="contacto-icono">📍</div>
+                    <h3>Ubicación</h3>
+                    <p>Chulumani, Sud Yungas, La Paz</p>
+                </article>
+
+                <!-- TELÉFONO -->
+                <article class="contacto-tarjeta">
+                    <div class="contacto-icono">📞</div>
+                    <h3>Teléfono institucional</h3>
+                    <p>Por confirmar</p>
+                </article>
+
+                <!-- CORREO -->
+                <article class="contacto-tarjeta">
+                    <div class="contacto-icono">✉️</div>
+                    <h3>Correo electrónico</h3>
+                    <p>Por confirmar</p>
+                </article>
+
+                <!-- HORARIO DE ATENCIÓN -->
+                <article class="contacto-tarjeta">
+                    <div class="contacto-icono">🕒</div>
+                    <h3>Horario de atención</h3>
+                    <p>Por confirmar</p>
+                </article>
+
+            </div>
+
+            <!-- UBICACIÓN EN MAPA -->
+            <div class="ubicacion-mapa">
+
+                <h3>¿Dónde estamos ubicados?</h3>
+
+                <p>
+                    La ubicación exacta del establecimiento
+                    será incorporada después de su verificación.
+                </p>
+
+                <div class="mapa-pendiente">
+                    <span>📍</span>
+                    <p>Mapa institucional pendiente</p>
+                </div>
+
+            </div>
+
         </section>
+
 
     </main>
 
+
     <!-- PIE DE PÁGINA -->
-    <footer>
-        <p>Unidad Educativa Técnico Humanístico Miguel Mercado Encinas</p>
-        <p>Proyecto de innovación tecnológica - 2026</p>
+    <footer class="pie-pagina">
+
+        <div class="footer-contenedor">
+
+            <div class="footer-columna">
+                <h3>U.E. Miguel Mercado Encinas</h3>
+                <p>
+                    Portal web informativo desarrollado
+                    como proyecto de innovación tecnológica
+                    de Técnico Medio.
+                </p>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Enlaces rápidos</h3>
+
+                <a href="#inicio">Inicio</a>
+                <a href="#institucion">Institución</a>
+                <a href="#noticias">Noticias</a>
+                <a href="#personal">Personal</a>
+                <a href="#horarios">Horarios</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Ubicación</h3>
+                <p>Chulumani, Sud Yungas</p>
+                <p>La Paz - Bolivia</p>
+            </div>
+
+        </div>
+
+        <div class="footer-inferior">
+            <p>Proyecto de innovación tecnológica - 2026</p>
+            <p>Prototipo académico no oficial</p>
+        </div>
+
     </footer>
+
 
 </body>
 </html>

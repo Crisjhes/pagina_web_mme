@@ -8,6 +8,7 @@
     <title>U.E. Miguel Mercado Encinas</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="directorio.js" defer></script>
 </head>
 <body>
 
@@ -23,16 +24,54 @@
     </div>
     </header>
 
-    <!-- NAVEGACIÓN -->
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#institucion">Institución</a>
-        <a href="#noticias">Noticias</a>
-        <a href="#personal">Personal</a>
-        <a href="#horarios">Horarios</a>
-        <a href="#galeria">Galería</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+
+<!-- MENÚ DE NAVEGACIÓN -->
+<nav class="menu-principal" aria-label="Navegación principal">
+
+    <div class="menu-contenedor">
+
+        <div class="menu-superior">
+
+            <span class="menu-titulo">
+                Menú
+            </span>
+
+            <button
+                type="button"
+                id="botonMenu"
+                class="boton-menu"
+                aria-label="Abrir menú de navegación"
+                aria-expanded="false"
+                aria-controls="enlacesMenu">
+
+                &#9776;
+
+            </button>
+
+        </div>
+
+        <div class="menu-enlaces" id="enlacesMenu">
+
+            <a href="#inicio">Inicio</a>
+
+            <a href="#institucion">Institución</a>
+
+            <a href="#noticias">Noticias</a>
+
+            <a href="#personal">Personal</a>
+
+            <a href="#horarios">Horarios</a>
+
+            <a href="#galeria">Galería</a>
+
+            <a href="#contacto">Contacto</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
 
     <main>
 
@@ -127,43 +166,100 @@
 
             <div class="contenedor-noticias">
 
-                <article class="noticia" data-categoria="academico" data-destacada="true">
+                
+            <!-- NOTICIA: ENTRADA FOLCLÓRICA -->
+            <article class="noticia"
+                    data-categoria="cultura"
+                    data-destacada="true">
 
-                    <div class="imagen-noticia">
-                        <img src="img/fachada.jpg"
-                            alt="Fachada de la unidad educativa">
-                    </div>
+                <div class="imagen-noticia imagen-pendiente">
+                    Fotografía pendiente de vincular
+                </div>
 
-                    <div class="contenido-noticia">
+                <div class="contenido-noticia">
 
-                        <span class="categoria">
-                            Demostración
-                        </span>
+                    <span class="categoria">Cultura</span>
 
-                        <h3>Noticia de ejemplo</h3>
+                    <h3>
+                        Participación en la entrada folklórica
+                        de Chulumani
+                    </h3>
 
-                        <p>
-                            Conoce cómo funcionará el apartado
-                            de noticias completas de nuestra
-                            página web institucional.
-                        </p>
+                    <p>
+                        Estudiantes de la unidad educativa
+                        participaron en la entrada folklórica
+                        de la fiesta de Chulumani,
+                        presentando la danza de Tobas.
+                    </p>
 
-                        <small>
-                            Publicación de prueba
-                        </small>
+                    <small>Fecha: por confirmar</small>
 
-                        <a href="noticias/noticia-ejemplo.html"
-                        class="boton-leer">
-                            Leer más →
-                        </a>
+                </div>
+            </article>
 
-                    </div>
 
-                </article>
+            <!-- NOTICIA: MISS Y MÍSTER -->
+            <article class="noticia"
+                    data-categoria="cultura"
+                    data-destacada="true">
+
+                <div class="imagen-noticia imagen-pendiente">
+                    Fotografía pendiente de vincular
+                </div>
+
+                <div class="contenido-noticia">
+
+                    <span class="categoria">Actividad institucional</span>
+
+                    <h3>
+                        Elección de Miss y Míster
+                        de la unidad educativa
+                    </h3>
+
+                    <p>
+                        Se realizó la actividad de elección
+                        de Miss y Míster de la unidad educativa.
+                    </p>
+
+                    <small>Fecha: por confirmar</small>
+
+                </div>
+            </article>
+
+
+            <!-- NOTICIA: CAMPEONATO -->
+            <article class="noticia"
+                    data-categoria="deportes"
+                    data-destacada="true">
+
+                <div class="imagen-noticia">
+                    <img
+                        src="galeria/equipo_masculino_mme.jpeg"
+                        alt="Descripción de la actividad">
+                </div>
+
+                <div class="contenido-noticia">
+
+                    <span class="categoria">Deportes</span>
+
+                    <h3>
+                        Plantel docente masculino,
+                        campeón interinstitucional
+                    </h3>
+
+                    <p>
+                        Los profesores varones de nuestra
+                        unidad educativa obtuvieron el
+                        campeonato interinstitucional
+                        del municipio.
+                    </p>
+
+                    <small>Fecha: 02 de octubre de 2026</small>
+
+                </div>
+            </article>
 
             </div>
-
-
 
             <p id="sinResultados" hidden>
                 No se encontraron noticias.
@@ -186,7 +282,7 @@
                 <article class="personal-tarjeta">
                     <div class="personal-avatar">D</div>
                     <h3>Dirección</h3>
-                    <p>Nombre pendiente de confirmación</p>
+                    <p>Lic. Wilfredo Mamani Yujra</p>
                     <span>Director/a</span>
                 </article>
 
@@ -203,115 +299,127 @@
                     <p>Información pendiente</p>
                     <span>Administración</span>
                 </article>
-
             </div>
+            
+            <div class="directorio-escolar">
+
+                <h3>Asesores de curso y comisiones - Gestión 2026</h3>
+
+                <p>
+                    Consulta los asesores asignados a cada curso
+                    y las comisiones institucionales identificadas.
+                </p>
+
+                <label for="buscarDocente">Buscar curso o profesor</label>
+
+                <input
+                    type="search"
+                    id="buscarDocente"
+                    placeholder="Ejemplo: 4to B, Erika, Salud..."
+                >
+
+                <div class="tabla-directorio">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Curso</th>
+                                <th>Profesor asesor</th>
+                                <th>Comisión</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tablaDocentes">
+                            <!-- JavaScript cargará los registros -->
+                        </tbody>
+                    </table>
+                    
+                    <!-- CONTROLES DE PAGINACIÓN -->
+                    <div class="paginacion-directorio">
+
+                        <button
+                            type="button"
+                            id="paginaAnterior"
+                            class="boton-pagina">
+                            &#8592; Anterior
+                        </button>
+
+                        <span id="infoPagina" aria-live="polite">
+                            Página 1 de 1
+                        </span>
+
+                        <button
+                            type="button"
+                            id="paginaSiguiente"
+                            class="boton-pagina">
+                            Siguiente &#8594;
+                        </button>
+                    </div>
+                </div>
+                <p id="sinDocentes" hidden>
+                    No se encontraron coincidencias.
+                </p>
+            </div>
+
         </section>
 
-
 <!-- HORARIOS INSTITUCIONALES -->
+        
         <section id="horarios" class="seccion-horarios">
 
-            <h2>Horarios institucionales</h2>
+            <h2>Horarios de clases</h2>
 
             <p>
-                Consulta los horarios de ingreso, clases,
-                recreo y salida de nuestra unidad educativa.
+                Horario del turno mañana de la Unidad Educativa
+                Técnico Humanístico Miguel Mercado Encinas.
             </p>
 
-            <div class="horarios-opciones">
-                <button type="button"
-                        class="boton-turno activo"
-                        data-turno="manana">
-                    Turno mañana
-                </button>
+            <div class="tabla-horarios">
 
-                <button type="button"
-                        class="boton-turno"
-                        data-turno="tarde">
-                    Turno tarde
-                </button>
-            </div>
-
-            <!-- TABLA TURNO MAÑANA -->
-            <div id="turno-manana" class="tabla-horarios">
                 <h3>Turno mañana</h3>
 
                 <table>
                     <thead>
                         <tr>
-                            <th>Actividad</th>
-                            <th>Horario</th>
+                            <th>Período</th>
+                            <th>Inicio</th>
+                            <th>Fin</th>
+                            <th>Duración</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td>Ingreso de estudiantes</td>
-                            <td>Por confirmar</td>
-                        </tr>
+                        <tr><td>1.º período</td><td>08:00</td><td>08:40</td><td>40 min</td></tr>
+                        <tr><td>2.º período</td><td>08:40</td><td>09:20</td><td>40 min</td></tr>
+                        <tr><td>3.º período</td><td>09:20</td><td>10:00</td><td>40 min</td></tr>
+                        <tr><td>4.º período</td><td>10:00</td><td>10:40</td><td>40 min</td></tr>
 
-                        <tr>
-                            <td>Inicio de clases</td>
-                            <td>Por confirmar</td>
-                        </tr>
-
-                        <tr>
+                        <tr class="fila-recreo">
                             <td>Recreo</td>
-                            <td>Por confirmar</td>
+                            <td>10:40</td>
+                            <td>11:00</td>
+                            <td>20 min</td>
                         </tr>
 
-                        <tr>
-                            <td>Salida de estudiantes</td>
-                            <td>Por confirmar</td>
-                        </tr>
+                        <tr><td>5.º período</td><td>11:00</td><td>11:40</td><td>40 min</td></tr>
+                        <tr><td>6.º período</td><td>11:40</td><td>12:20</td><td>40 min</td></tr>
+                        <tr><td>7.º período</td><td>12:20</td><td>13:00</td><td>40 min</td></tr>
                     </tbody>
                 </table>
+
             </div>
 
-            <!-- TABLA TURNO TARDE -->
-            <div id="turno-tarde"
-                class="tabla-horarios"
-                hidden>
-
-                <h3>Turno tarde</h3>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Actividad</th>
-                            <th>Horario</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>Ingreso de estudiantes</td>
-                            <td>Por confirmar turno tarde</td>
-                        </tr>
-
-                        <tr>
-                            <td>Inicio de clases</td>
-                            <td>Por confirmar turno tarde</td>
-                        </tr>
-
-                        <tr>
-                            <td>Recreo</td>
-                            <td>Por confirmar turno tarde</td>
-                        </tr>
-
-                        <tr>
-                            <td>Salida de estudiantes</td>
-                            <td>Por confirmar turno tarde</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="informacion-salida">
+                <p><strong>Salida después del sexto período:</strong> 12:20</p>
+                <p><strong>Salida general:</strong> 13:00</p>
+                <small>
+                    La salida a las 12:20 corresponde a los estudiantes
+                    que concluyen sus clases en el sexto período.
+                    Consultar la distribución por cursos.
+                </small>
             </div>
-
-            <p class="aviso-horarios">
-                Información pendiente de verificación institucional.
-            </p>
 
         </section>
+
         
         
 <!-- GALERÍA FOTOGRÁFICA -->
@@ -441,6 +549,27 @@
 
                 </figure>
 
+                <figure class="galeria-item"
+                        data-categoria="deportes">
+
+                    <button type="button"
+                            class="galeria-abrir"
+                            aria-label="Ampliar fotografía del evento deportivo">
+
+                        <img src="galeria/equipo_masculino_mme.jpeg"
+                            alt="Equipo masculino"
+                            loading="lazy">
+
+                    </button>
+
+                    <figcaption>
+                        <h3>Evento deportivo</h3>
+                        <p>Campeonato interinstitucional ganado por el plantel
+                            docente masculino de la Unidad Educativa Miguel Mercado Encinas</p>
+                    </figcaption>
+
+                </figure>
+
             </div>
 
             <p id="galeriaSinResultados" hidden>
@@ -501,41 +630,44 @@
                 <article class="contacto-tarjeta">
                     <div class="contacto-icono">📞</div>
                     <h3>Teléfono institucional</h3>
-                    <p>Por confirmar</p>
+                    <p>77210543</p>
                 </article>
 
                 <!-- CORREO -->
                 <article class="contacto-tarjeta">
                     <div class="contacto-icono">✉️</div>
                     <h3>Correo electrónico</h3>
-                    <p>Por confirmar</p>
+                    <p>info@miguelmercadoencinas.edu.bo</p>
                 </article>
 
                 <!-- HORARIO DE ATENCIÓN -->
                 <article class="contacto-tarjeta">
                     <div class="contacto-icono">🕒</div>
                     <h3>Horario de atención</h3>
-                    <p>Por confirmar</p>
+                    <p>Lunes a viernes, 8:00 AM - 12:30 PM</p>
                 </article>
 
             </div>
 
             <!-- UBICACIÓN EN MAPA -->
-            <div class="ubicacion-mapa">
+                <div class="ubicacion-mapa">
 
-                <h3>¿Dónde estamos ubicados?</h3>
+                    <h3>¿Dónde estamos ubicados?</h3>
 
-                <p>
-                    La ubicación exacta del establecimiento
-                    será incorporada después de su verificación.
-                </p>
+                    <p>
+                        Unidad Educativa Técnico Humanístico
+                        Miguel Mercado Encinas.
+                    </p>
 
-                <div class="mapa-pendiente">
-                    <span>📍</span>
-                    <p>Mapa institucional pendiente</p>
+                    <p>Chulumani, Sud Yungas, La Paz - Bolivia.</p>
+
+                    <div class="mapa-google">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d945.6118426280543!2d-67.5264670063933!3d-16.40965827281899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f5d1dfd4d130b%3A0x18142f695c253529!2sUNIDAD%20EDUCATIVA%20MIGUEL%20MERCADO%20ENCINAS!5e1!3m2!1ses!2sbo!4v1793723047391!5m2!1ses!2sbo" 
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
                 </div>
 
-            </div>
 
         </section>
 

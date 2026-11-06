@@ -1,0 +1,34 @@
+PORTAL INFORMATIVO - U.E. MIGUEL MERCADO ENCINAS
+
+1. Descomprime este ZIP en una carpeta de tu computadora.
+2. Abre esa carpeta en Visual Studio Code: Archivo > Abrir carpeta.
+3. Abre index.html en tu navegador o usa la extensión Live Server.
+4. Puedes modificar style.css (diseño), script.js (funciones) y datos.js (asesores).
+5. Las páginas individuales están en noticias/. Usa la navegación y los botones Leer más.
+6. El documento histórico original está en documentos/ y su texto está integrado en la página.
+
+FOTOGRAFÍAS
+- img/logoMME.png y img/fachada.jpg: imágenes suministradas en el proyecto.
+- galeria/eleccionMister.jpeg y galeria/todosSantos.jpeg: fotografías suministradas para las actividades culturales.
+- galeria/docentesCampeonato.jpeg: fotografía del equipo docente en el campeonato interinstitucional.
+- Las versiones .webp se utilizan en las tarjetas y páginas para optimizar la carga.
+- Los .webp son versiones optimizadas generadas desde las fotografías originales.
+- Otras fotografías de Tobas, campeonato, actividades y docentes no estaban disponibles como archivos originales en esta sesión; las noticias quedan con espacio reservado.
+
+ATENCIÓN A LA PRIVACIDAD
+El ZIP incluye imágenes que podrían mostrar estudiantes menores identificables. Úsalo localmente.
+NO publiques el proyecto en repositorios públicos ni en un hosting sin contar con permisos de la institución, consentimiento aplicable de familiares/tutores y autorización del fotógrafo.
+Si aún no cuentas con los permisos, retira galeria/eleccionMister.jpeg y galeria/eleccionMister.webp de cualquier versión pública y usa imágenes sin personas identificables o anonimizadas.
+
+MAPA
+Se incorporó el iframe de Google Maps que proporcionaste en esta conversación. El resultado del mapa aparece identificado como “Chulumani”; verifica visualmente que el marcador señale el ingreso de la unidad educativa y no solo la localidad. El mapa se encuentra en index.html, sección Contacto y ubicación.
+
+DATOS HISTÓRICOS
+La reseña de octubre de 2024 contiene las cifras de 402 estudiantes y 29 docentes/administrativos y menciona al director de entonces. No están confirmadas para la gestión 2026.
+Las grafías divergentes entre los documentos de asesores y comisiones deben revisarse antes de publicación oficial.
+
+NOTA DE RECONSTRUCCIÓN
+Esta es una versión completa y funcional RECONSTRUIDA a partir de lo trabajado en la conversación y de los archivos disponibles, no una copia exacta del repositorio local de VS Code, que no fue adjuntado.
+
+PUBLICACIÓN
+Cuando obtengas permisos, revisa y confirma las fechas, datos personales, contenidos y rutas antes de hacer git add/commit/push.
